@@ -13,6 +13,18 @@ export class Assessments {
   @Column()
   description: string;
 
+  @Column()
+  closingDate: Date;
+
+  @Column()
+  assessmentType: string;
+
+  @Column()
+  duration: string;
+
+  @Column()
+  subject: string;
+
   // An assessment would have multiple questions!
   @OneToMany(() => Question, (question) => question.assessment)
   questions: Question[];
